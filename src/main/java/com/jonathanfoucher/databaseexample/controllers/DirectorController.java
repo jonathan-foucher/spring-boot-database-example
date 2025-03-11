@@ -19,8 +19,8 @@ public class DirectorController {
     }
 
     @GetMapping("/ordered")
-    public List<DirectorDto> findALlByOrderByLastNameAscFirstNameAsc() {
-        return directorService.findALlByOrderByLastNameAscFirstNameAsc();
+    public List<DirectorDto> findAllByOrderByLastNameAscFirstNameAsc() {
+        return directorService.findAllByOrderByLastNameAscFirstNameAsc();
     }
 
     @GetMapping

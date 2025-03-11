@@ -21,8 +21,8 @@ public class DirectorService {
     }
 
     @Transactional
-    public List<DirectorDto> findALlByOrderByLastNameAscFirstNameAsc() {
-        return directorRepository.findALlByOrderByLastNameAscFirstNameAsc()
+    public List<DirectorDto> findAllByOrderByLastNameAscFirstNameAsc() {
+        return directorRepository.findAllByOrderByLastNameAscFirstNameAsc()
                 .map(this::convertEntityToDto)
                 .toList();
     }

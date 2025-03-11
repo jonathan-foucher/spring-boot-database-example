@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 
 @Repository
 public interface DirectorRepository extends JpaRepository<Director, Long> {
-    Stream<Director> findALlByOrderByLastNameAscFirstNameAsc();
+    Stream<Director> findAllByOrderByLastNameAscFirstNameAsc();
 
     Stream<Director> findByLastName(String lastName);
 }

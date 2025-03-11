@@ -8,11 +8,14 @@ import java.time.LocalDate;
 import java.time.ZonedDateTime;
 
 public abstract class MovieSpecs {
+    private MovieSpecs() {
+    }
+
     public static Specification<Movie> isReleasedAfter(LocalDate releaseAfter) {
-        return (root, query, builder) -> releaseAfter != null ? builder.greaterThan(root.get(Movie_.releaseDate), releaseAfter) : null;
+        return (root, _, builder) -> releaseAfter != null ? builder.greaterThan(root.get(Movie_.releaseDate), releaseAfter) : null;
     }
 
     public static Specification<Movie> isUpdatedSince(ZonedDateTime updatedSince) {
-        return (root, query, builder) -> updatedSince != null ? builder.greaterThan(root.get(Movie_.updatedAt), updatedSince) : null;
+        return (root, _, builder) -> updatedSince != null ? builder.greaterThan(root.get(Movie_.updatedAt), updatedSince) : null;
     }
 }
